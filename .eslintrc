@@ -1,0 +1,67 @@
+{
+	"extends": ["next", "next/core-web-vitals"],
+	"env": {
+		"node": true,
+		"browser": true,
+		"jquery": false,
+		"es6": true,
+		"commonjs": true,
+		"jest": true
+	},
+	"plugins": ["@typescript-eslint", "react-hooks", "import"],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 2017,
+		"sourceType": "module"
+	},
+	"rules": {
+		"@next/next/no-img-element": "off",
+		// for Prettier
+		"no-mixed-spaces-and-tabs": "off",
+		"no-unused-vars": "off",
+		"@typescript-eslint/no-unused-vars": "warn"
+	},
+	"settings": {
+		"import/resolver": {
+			"typescript": {
+				"alwaysTryTypes": true
+			}
+		}
+	},
+	"overrides": [
+		{
+			"files": ["*.ts", "*.tsx"],
+			"rules": {}
+		},
+		{
+			"files": ["src/**/*.{js,jsx,ts,tsx}"],
+			"rules": {
+				"import/order": [
+					"warn",
+					{
+						"groups": [
+							"builtin",
+							"external",
+							"parent",
+							"sibling",
+							"index",
+							"object",
+							"type"
+						],
+						"pathGroups": [
+							{
+								"pattern": "@/**",
+								"group": "parent",
+								"position": "before"
+							}
+						],
+						"alphabetize": {
+							"order": "asc"
+						},
+						"newlines-between": "always"
+					}
+				]
+			}
+		}
+	]
+}

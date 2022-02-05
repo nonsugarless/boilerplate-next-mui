@@ -1,0 +1,95 @@
+{
+	"name": "boilerplate-next-mui",
+	"version": "0.0.1",
+	"private": true,
+	"description": "",
+	"scripts": {
+		"start": "next start",
+		"build": "next build",
+		"dev": "open http://localhost:3333 && next dev -p 3333",
+		"test": "jest",
+		"lint": "next lint",
+		"story": "start-storybook -p 6006",
+		"build:story": "build-storybook -o ./dist/storybook/"
+	},
+	"author": "nonsugarless",
+	"license": "",
+	"engines": {
+		"node": "16.x"
+	},
+	"browserslist": [
+		"last 2 version"
+	],
+	"jest": {
+		"testRegex": "(\\.|/)(test|spec)\\.tsx?$",
+		"collectCoverageFrom": [
+			"**/*.{js,jsx,ts,tsx}",
+			"!**/*.d.ts",
+			"!**/node_modules/**"
+		],
+		"moduleNameMapper": {
+			"^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
+			"^@/(.*)$": "<rootDir>/src/$1"
+		},
+		"testPathIgnorePatterns": [
+			"<rootDir>/node_modules/",
+			"<rootDir>/.next/"
+		],
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js",
+			"jsx",
+			"json",
+			"node"
+		]
+	},
+	"devDependencies": {
+		"@babel/core": "7.17.0",
+		"@next/eslint-plugin-next": "12.0.10",
+		"@storybook/addon-actions": "6.4.18",
+		"@storybook/addon-essentials": "6.4.18",
+		"@storybook/addon-links": "6.4.18",
+		"@storybook/addon-postcss": "2.0.0",
+		"@storybook/react": "6.4.18",
+		"@types/jest": "27.4.0",
+		"@types/node": "16.11.7",
+		"@types/react": "17.0.39",
+		"@types/react-dom": "17.0.11",
+		"@typescript-eslint/eslint-plugin": "5.2.0",
+		"@typescript-eslint/parser": "5.2.0",
+		"eslint": "7.23.0",
+		"eslint-config-next": "12.0.3",
+		"eslint-config-prettier": "8.3.0",
+		"eslint-plugin-import": "2.25.2",
+		"eslint-plugin-node": "11.1.0",
+		"eslint-plugin-react": "7.26.1",
+		"eslint-plugin-react-hooks": "4.2.0",
+		"jest": "27.4.7",
+		"postcss": "8.4.6",
+		"postcss-calc": "8.2.3",
+		"postcss-preset-env": "7.3.1",
+		"prettier": "2.5.1",
+		"prettier-eslint": "13.0.0",
+		"ts-jest": "27.1.3",
+		"typescript": "4.5.5"
+	},
+	"dependencies": {
+		"@emotion/react": "11.7.1",
+		"@emotion/styled": "11.6.0",
+		"@mui/icons-material": "5.3.1",
+		"@mui/material": "5.4.0",
+		"camelcase-keys": "7.0.1",
+		"dayjs": "1.10.7",
+		"isomorphic-unfetch": "3.1.0",
+		"next": "12.0.10",
+		"postcss-calc": "8.0.0",
+		"query-string": "7.0.1",
+		"react": "17.0.2",
+		"react-dom": "17.0.2",
+		"react-loading-skeleton": "3.0.2",
+		"recoil": "0.6.1",
+		"recoil-persist": "4.0.0",
+		"sass": "1.49.7"
+	}
+}

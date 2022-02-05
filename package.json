@@ -1,7 +1,7 @@
 {
 	"name": "boilerplate-next-mui",
 	"version": "0.0.1",
-	"private": true,
+	"private": false,
 	"description": "",
 	"scripts": {
 		"start": "next start",

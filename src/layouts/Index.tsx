@@ -4,7 +4,7 @@ import { grey } from '@mui/material/colors';
 
 import Navigation from '@/layouts/Navigation';
 
-const Layout: React.FC = ({ children }) => {
+const Layout = ({ children }: { children: React.ReactChild }) => {
 	return (
 		<Box
 			sx={{

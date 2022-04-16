@@ -26,7 +26,7 @@ export type Props = {
 	profile_path: PersonDetail['profile_path'];
 	biography: PersonDetail['biography'];
 };
-const DetailBlock: React.VFC<Props> = ({ name, profile_path, biography }) => {
+const DetailBlock = ({ name, profile_path, biography }: Props) => {
 	return (
 		<div>
 			<Typography variant="h1" component="h1" gutterBottom mb={2}>

@@ -12,7 +12,7 @@ import NextLinkComposed from '@/components/helpers/NextLinkComposed';
 
 const LinkLogo = styled('a')(() => ({}));
 
-export default function Navigation() {
+const Navigation = () => {
 	const router = useRouter();
 	const currentPage = router.pathname;
 
@@ -50,4 +50,6 @@ export default function Navigation() {
 			</BottomNavigation>
 		</Box>
 	);
-}
+};
+
+export default Navigation;

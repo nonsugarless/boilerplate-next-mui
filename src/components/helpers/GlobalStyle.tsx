@@ -1,6 +1,6 @@
 import GlobalStyles from '@mui/material/GlobalStyles';
 
-const GlobalStyle: React.VFC = () => {
+const GlobalStyle = () => {
 	return (
 		<GlobalStyles
 			styles={{

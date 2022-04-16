@@ -13,7 +13,7 @@ export type Props = {
 	name: PersonSummary['name'];
 	known_for: PersonSummary['known_for'];
 };
-const Card: React.VFC<Props> = ({ as = 'div', id, profile_path, name, known_for }) => {
+const Card = ({ as = 'div', id, profile_path, name, known_for }: Props) => {
 	return (
 		<MuiCard component={as}>
 			<CardActionArea

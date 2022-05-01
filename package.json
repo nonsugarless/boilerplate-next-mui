@@ -8,10 +8,11 @@
 		"build": "next build",
 		"dev": "open http://localhost:3333 && next dev -p 3333",
 		"test": "jest",
-		"lint": "next lint",
+		"lint:next": "next lint",
+		"lint:tsc": "tsc --noEmit",
+		"lint": "run-p -c 'lint:*'",
 		"story": "start-storybook -p 6006",
-		"build:story": "build-storybook -o ./dist/storybook/",
-		"type-check": "tsc --noEmit"
+		"build:story": "build-storybook -o ./dist/storybook/"
 	},
 	"author": "nonsugarless",
 	"engines": {
@@ -66,6 +67,7 @@
 		"eslint-plugin-react": "7.29.4",
 		"eslint-plugin-react-hooks": "4.4.0",
 		"jest": "27.5.1",
+		"npm-run-all": "^4.1.5",
 		"postcss": "8.4.12",
 		"postcss-calc": "8.2.4",
 		"postcss-preset-env": "7.4.3",

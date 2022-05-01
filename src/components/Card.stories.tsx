@@ -20,8 +20,7 @@ const Template: Story<Props> = (args) => (
 export const story = Template.bind({});
 story.args = {
 	id: 1,
-	profile_path: '/2qhIDp44cAqP2clOgt2afQI07X8.jpg',
+	imagePath: 'https://i.pravatar.cc/150?img=50',
 	name: 'John Doe',
-	known_for: [{ title: 'foo' }, { title: 'bar' }],
 };
 story.storyName = 'Card';

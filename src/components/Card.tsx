@@ -4,16 +4,13 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
-import type { PersonSummary } from '@/store/types';
-
 export type Props = {
 	as?: React.ElementType;
-	id: PersonSummary['id'];
-	profile_path: PersonSummary['profile_path'];
-	name: PersonSummary['name'];
-	known_for: PersonSummary['known_for'];
+	id: string;
+	imagePath: string;
+	name: string;
 };
-const Card = ({ as = 'div', id, profile_path, name, known_for }: Props) => {
+const Card: React.FC<Props> = ({ as = 'div', id, imagePath, name }) => {
 	return (
 		<MuiCard component={as}>
 			<CardActionArea
@@ -27,7 +24,7 @@ const Card = ({ as = 'div', id, profile_path, name, known_for }: Props) => {
 			>
 				<CardMedia
 					component="img"
-					image={`https://image.tmdb.org/t/p/w500/${profile_path}`}
+					image={imagePath}
 					alt=""
 					loading="lazy"
 					height={240}
@@ -39,9 +36,6 @@ const Card = ({ as = 'div', id, profile_path, name, known_for }: Props) => {
 				>
 					<Typography gutterBottom variant="subtitle1" component="h3">
 						{name}
-					</Typography>
-					<Typography variant="body2" color="text.secondary">
-						代表作: {known_for.map((item) => item.title).join('、')}
 					</Typography>
 				</CardContent>
 			</CardActionArea>

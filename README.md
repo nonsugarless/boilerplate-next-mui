@@ -2,8 +2,6 @@
 
 Next.js and Material UI boilerplate.
 
-Using [TMDB people API](https://developers.themoviedb.org/3/getting-started) as example of data fetching.
-
 # Environment
 
 Node.js 16.x

@@ -17,7 +17,6 @@ export default function fetchWithErrorHandling<T extends unknown>(
 	const baseUrl = process.env.API_BASE_URL;
 	const apiUrl = `${baseUrl}${url}?${stringify({
 		...params,
-		api_key: process.env.API_KEY,
 	})}`;
 
 	return fetch(apiUrl, {
@@ -25,8 +24,8 @@ export default function fetchWithErrorHandling<T extends unknown>(
 			'Content-Type': 'application/json;charset=utf-8',
 		},
 	})
-		.catch((error) => {
-			throw Error(error);
+		.catch((_error) => {
+			throw Error(apiUrl);
 		})
 		.then(handleErrors)
 		.then((response) => response.json());
